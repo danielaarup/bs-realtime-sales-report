@@ -2,4 +2,3 @@ plotly
 google-cloud-bigquery
 datetime
 millify
-urllib3==1.26.16
