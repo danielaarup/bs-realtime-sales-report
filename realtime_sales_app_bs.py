@@ -8,6 +8,9 @@ from millify import millify
 from google.oauth2 import service_account
 from google.cloud import bigquery
 
+# Page config.
+st.set_page_config(page_title="Realtime Sales Report - Beck Søndergaard")
+
 # Custom CSS
 st.markdown("""
     <style>
@@ -25,9 +28,6 @@ st.markdown("""
     """,
     unsafe_allow_html=True
 )
-
-# Page config.
-st.set_page_config(page_title="Realtime Sales Report - Beck Søndergaard")
 
 # Sidebar
 with st.sidebar:
@@ -223,15 +223,6 @@ fig = px.scatter_mapbox(
 )
 
 st.plotly_chart(fig)
-
-# # Alternative plot w/ Streamlit
-# # Has issues with relative point sizes
-# st.map(
-#     data=joined_grouped,
-#     latitude='Latitude',
-#     longitude='Longitude',
-#     size='count'
-# )
 
 # Table of top products
 op_stats = ordered_products_df.loc[
