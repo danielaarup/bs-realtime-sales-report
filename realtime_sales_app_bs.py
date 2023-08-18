@@ -168,6 +168,8 @@ fig = px.bar(
     #line_shape='spline'
 )
 fig.update_layout(dragmode=False)
+fig.update_xaxes(fixedrange=True)
+fig.update_yaxes(fixedrange=True)
 
 st.plotly_chart(fig, use_container_width=True)
 
