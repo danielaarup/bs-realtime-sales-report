@@ -167,6 +167,7 @@ fig = px.bar(
     #color_discrete_sequence=['darkgrey']
     #line_shape='spline'
 )
+fig.update_layout(dragmode=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
