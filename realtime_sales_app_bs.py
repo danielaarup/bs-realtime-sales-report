@@ -222,7 +222,7 @@ fig = px.scatter_mapbox(
     mapbox_style='light'
 )
 
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 # Table of top products
 op_stats = ordered_products_df.loc[
