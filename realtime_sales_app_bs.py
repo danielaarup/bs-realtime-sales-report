@@ -143,7 +143,7 @@ yesterday_day = today_date.day - 1
 yesterday_date = datetime.date(today_year, today_month, yesterday_day)
 
 d = st.date_input(
-    label="Select period",
+    label="Select period (two dates):",
     value=[yesterday_date, today_date],
     max_value=today_date
 )
